@@ -4,25 +4,21 @@ Complete instructions to run and develop the **Lemon Maja** web application on W
 
 ---
 
-## ⚡ Quick Start (One Simple Command)
+## ⚡ Quick Start (Type Just `run`)
 
-If you are using Windows **Command Prompt (`cmd`)**:
+In your terminal (PowerShell, Command Prompt, or VS Code), just type:
 
-1. Open **Command Prompt** in the project folder:
-   ```cmd
-   cd "c:\Users\Mohammed Noufal V\Downloads\lemon maja"
-   ```
-2. Type and hit **Enter**:
-   ```cmd
-   run
-   ```
-   *(or `run.bat`)*
+```cmd
+run
+```
+
+and hit **Enter**!
 
 **What `run` does automatically:**
-- Verifies that Node.js is installed.
-- Automatically installs dependencies if `node_modules` is not yet installed.
-- Starts the Next.js TurboPack development server.
-- Opens your browser automatically to `http://localhost:3000`.
+- Verifies Node.js is ready.
+- Verifies and installs dependencies if missing.
+- Starts the Next.js development server at **http://localhost:3000**.
+- Opens your browser automatically.
 
 ---
 
