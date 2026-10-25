@@ -6,8 +6,8 @@ rem  HOW TO USE:
 rem    1. Open Command Prompt (cmd) or PowerShell in this folder.
 rem    2. Simply type:
 rem           run
-rem       or:
-rem           run.bat
+rem       or in PowerShell:
+rem           .\run
 rem    3. The script will automatically:
 rem       - Verify Node.js is installed
 rem       - Install dependencies if missing (node_modules)
@@ -30,7 +30,7 @@ rem Step 1: Check Node.js installation
 where node >nul 2>&1
 if %ERRORLEVEL% neq 0 (
     echo [ERROR] Node.js is not installed or not found in your system PATH.
-    echo Please install Node.js (v18 or higher) from https://nodejs.org/
+    echo Please install Node.js from https://nodejs.org/
     echo.
     pause
     exit /b 1
@@ -57,7 +57,7 @@ if not exist "node_modules" (
     echo Dependencies installed successfully.
     echo.
 ) else (
-    echo [2/3] Dependencies verified (node_modules present).
+    echo [2/3] Dependencies verified: node_modules present.
     echo.
 )
 
@@ -73,7 +73,7 @@ echo.
 rem Open browser in background after 2 seconds
 start "" cmd /c "timeout /t 2 /nobreak >nul && start http://localhost:3000"
 
-rem Run Next.js dev server with pnpm (fallback to npm if pnpm not in PATH)
+rem Run Next.js dev server with pnpm
 where pnpm >nul 2>&1
 if %ERRORLEVEL% equ 0 (
     call pnpm dev
