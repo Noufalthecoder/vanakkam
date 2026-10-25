@@ -62,6 +62,7 @@ if not exist "node_modules" (
 )
 
 rem Step 3: Launch dev server
+if exist ".next\dev\lock" del /f /q ".next\dev\lock" 2>nul
 echo [3/3] Starting development server...
 echo.
 echo ============================================================================

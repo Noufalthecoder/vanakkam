@@ -3,6 +3,11 @@ Write-Host "                     LEMON MAJA APPLICATION RUNNER" -ForegroundColor
 Write-Host "============================================================================" -ForegroundColor Cyan
 Write-Host ""
 
+# Clean up any stale Next.js dev locks
+if (Test-Path ".next\dev\lock") {
+    Remove-Item -Path ".next\dev\lock" -Force -ErrorAction SilentlyContinue
+}
+
 # 1. Check Node
 $node = Get-Command node -ErrorAction SilentlyContinue
 if (-not $node) {
