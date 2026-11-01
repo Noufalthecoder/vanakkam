@@ -1,5 +1,5 @@
 Write-Host "============================================================================" -ForegroundColor Cyan
-Write-Host "                     LEMON MAJA APPLICATION RUNNER" -ForegroundColor Yellow
+Write-Host "                     VANAKKAM APPLICATION RUNNER" -ForegroundColor Yellow
 Write-Host "============================================================================" -ForegroundColor Cyan
 Write-Host ""
 

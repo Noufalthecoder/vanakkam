@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-label="Shade matching pipeline: AI ideal shade, CIEDE2000 ranking against real SKUs, nearest SKU rendered by YouCam Makeup VTO and added to bag">
+  <style>
+    .t{font:400 34px Georgia,serif;fill:#f6ece4}
+    .h{font:800 12px 'Segoe UI',Helvetica,Arial,sans-serif;letter-spacing:2.5px;fill:#b9a29c}
+    .b{font:700 15px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#f6ece4}
+    .m{font:13px 'Segoe UI',Helvetica,Arial,sans-serif;fill:#cdb8b2}
+    .mono{font:600 13px Consolas,'Courier New',monospace;fill:#cdb8b2}
+    .win{font:800 13px Consolas,'Courier New',monospace;fill:#7fcdb4}
+    @keyframes dash{to{stroke-dashoffset:-36}}
+    @keyframes glow{0%,100%{stroke-opacity:.35}50%{stroke-opacity:1}}
+    @keyframes scan{0%{transform:translateY(0)}100%{transform:translateY(210px)}}
+    @keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+    .flow{stroke-dasharray:6 6;animation:dash 1.1s linear infinite}
+    .ring{animation:glow 1.6s ease-in-out infinite}
+    .scan{animation:scan 2.4s ease-in-out infinite alternate}
+    .pop{transform-box:fill-box;transform-origin:center;animation:pop 2s ease-in-out infinite}
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#160c10"/><stop offset="1" stop-color="#2a1018"/></linearGradient>
+    <pattern id="k" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="11" cy="11" r="1.2" fill="#f6ece4" opacity=".07"/></pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#f0b450"/></marker>
+  </defs>
+  <rect width="1280" height="440" rx="24" fill="url(#bg)"/><rect width="1280" height="440" rx="24" fill="url(#k)"/>
+  <text x="48" y="64" class="t">Try-on = buy: how a shade is chosen</text>
+  <text x="50" y="92" class="m">Real numbers from the sample scan · Temple Gold look · lip channel</text>
+
+  <!-- 1 ideal -->
+  <g transform="translate(48 130)">
+    <text class="h">01 · AI IDEAL</text>
+    <rect y="18" width="200" height="230" rx="18" fill="#1e1418" stroke="#f6ece4" stroke-opacity=".12"/>
+    <rect x="20" y="38" width="160" height="110" rx="14" fill="#6b191d"/>
+    <text x="20" y="176" class="b">Maroon · warm</text>
+    <text x="20" y="198" class="mono">#6B191D</text>
+    <text x="20" y="222" class="m">from undertone, depth,</text>
+    <text x="20" y="238" class="m">lighting &amp; outfit</text>
+  </g>
+  <path d="M258 260 H 320" stroke="#f0b450" stroke-width="2.5" class="flow" fill="none" marker-end="url(#arr)"/>
+
+  <!-- 2 ranking -->
+  <g transform="translate(330 130)">
+    <text class="h">02 · CIEDE2000 vs 33 LIP SKUs</text>
+    <rect y="18" width="420" height="230" rx="18" fill="#1e1418" stroke="#f6ece4" stroke-opacity=".12"/>
+    <rect class="scan" x="12" y="28" width="396" height="8" rx="4" fill="#f0b450" opacity=".18"/>
+    <g transform="translate(20 40)">
+      <rect width="380" height="36" rx="10" fill="#7fcdb4" fill-opacity=".1" stroke="#7fcdb4" class="ring"/>
+      <rect x="10" y="7" width="22" height="22" rx="6" fill="#6b1a24"/><text x="44" y="23" class="b">Temple Maroon</text><text x="250" y="23" class="win">ΔE 2.7</text><text x="318" y="23" class="win">88%</text>
+    </g>
+    <g transform="translate(20 84)" opacity=".85"><rect x="10" y="7" width="22" height="22" rx="6" fill="#5e1420"/><text x="44" y="23" class="b">Kumkum Deep</text><text x="250" y="23" class="mono">ΔE 4.6</text><text x="318" y="23" class="mono">79%</text></g>
+    <g transform="translate(20 122)" opacity=".7"><rect x="10" y="7" width="22" height="22" rx="6" fill="#7d2030"/><text x="44" y="23" class="b">Kathakali</text><text x="250" y="23" class="mono">ΔE 5.8</text><text x="318" y="23" class="mono">74%</text></g>
+    <g transform="translate(20 160)" opacity=".5"><rect x="10" y="7" width="22" height="22" rx="6" fill="#7a3a3a"/><text x="44" y="23" class="b">Rosewood</text><text x="250" y="23" class="mono">ΔE 8.3</text><text x="318" y="23" class="mono">63%</text></g>
+    <text x="30" y="226" class="m">ΔE under 2 is invisible to the eye · under 3 reads as the same shade</text>
+  </g>
+  <path d="M760 260 H 822" stroke="#f0b450" stroke-width="2.5" class="flow" fill="none" marker-end="url(#arr)"/>
+
+  <!-- 3 render + bag -->
+  <g transform="translate(832 130)">
+    <text class="h">03 · RENDER THE SKU, SELL THE SKU</text>
+    <rect y="18" width="400" height="230" rx="18" fill="#1e1418" stroke="#f6ece4" stroke-opacity=".12"/>
+    <g transform="translate(20 38)">
+      <rect width="170" height="190" rx="14" fill="#2a1d22"/>
+      <ellipse cx="85" cy="92" rx="48" ry="60" fill="#c48d6b"/>
+      <path d="M37 86 C34 22 136 22 133 86 C133 56 112 40 85 42 C58 40 37 56 37 86Z" fill="#2b1a17"/>
+      <ellipse cx="67" cy="88" rx="7" ry="3.5" fill="#2b1a17"/><ellipse cx="103" cy="88" rx="7" ry="3.5" fill="#2b1a17"/>
+      <path class="pop" d="M71 122 Q85 114 99 122 Q85 136 71 122Z" fill="#6b1a24"/>
+      <text x="85" y="178" text-anchor="middle" class="h" style="letter-spacing:1px">MAKEUP VTO</text>
+    </g>
+    <g transform="translate(206 50)">
+      <text class="b">Silk Satin Lipstick</text>
+      <text y="24" class="m">Temple Maroon · L15</text>
+      <rect y="40" width="92" height="26" rx="13" fill="#7fcdb4" fill-opacity=".15"/><text x="12" y="58" class="win">88% match</text>
+      <text y="100" class="t" style="font-size:26px">₹699</text>
+      <rect y="122" width="160" height="40" rx="20" fill="#e25d80" class="pop"/><text x="80" y="147" text-anchor="middle" class="b" style="fill:#1a0b10">Add full kit −15%</text>
+    </g>
+  </g>
+</svg>

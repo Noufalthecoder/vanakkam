@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="Vanakkam — try on the exact shade you'll buy">
+  <style>
+    .serif{font-family:Georgia,'Times New Roman',serif}
+    .sans{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+    @keyframes scan{0%{transform:translateY(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(205px);opacity:0}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+    @keyframes dash{to{stroke-dashoffset:-40}}
+    @keyframes lip{0%,30%{fill:#6b1a24}36%,63%{fill:#c0566a}70%,96%{fill:#a51c2a}100%{fill:#6b1a24}}
+    @keyframes bar{0%{width:0}60%,100%{width:var(--w)}}
+    .scan{animation:scan 2.6s cubic-bezier(.6,0,.4,1) infinite}
+    .f1{animation:float 6s ease-in-out infinite}
+    .f2{animation:float 6s ease-in-out -2s infinite}
+    .f3{animation:float 6s ease-in-out -4s infinite}
+    .dot{animation:pulse 2.4s ease-in-out infinite}
+    .flow{stroke-dasharray:6 6;animation:dash 1.2s linear infinite}
+    .lip{animation:lip 7.5s ease-in-out infinite}
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a0d11"/><stop offset=".55" stop-color="#2a1018"/><stop offset="1" stop-color="#3a0f1f"/>
+    </linearGradient>
+    <linearGradient id="arch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0b450"/><stop offset=".55" stop-color="#e25d80"/><stop offset="1" stop-color="#8e1b3a"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3d1" stop-opacity="0"/><stop offset=".5" stop-color="#fff3d1" stop-opacity=".95"/><stop offset="1" stop-color="#fff3d1" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="kolam" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="11" cy="11" r="1.3" fill="#f6ece4" opacity=".09"/></pattern>
+    <clipPath id="archClip"><path d="M880 390 V170 a150 150 0 0 1 300 0 V390 Z"/></clipPath>
+    <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+
+  <rect width="1280" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="420" rx="24" fill="url(#kolam)"/>
+  <circle cx="1030" cy="200" r="190" fill="#e25d80" opacity=".18" filter="url(#glow)"/>
+
+  <!-- logo -->
+  <g transform="translate(72 70)">
+    <circle r="22" fill="#e25d80"/>
+    <g fill="#1a0b10">
+      <circle cx="13" r="2.4" class="dot"/><circle cx="-13" r="2.4" class="dot"/><circle cy="13" r="2.4" class="dot"/><circle cy="-13" r="2.4" class="dot"/>
+      <circle cx="9.2" cy="9.2" r="2.4"/><circle cx="-9.2" cy="9.2" r="2.4"/><circle cx="9.2" cy="-9.2" r="2.4"/><circle cx="-9.2" cy="-9.2" r="2.4"/>
+    </g>
+    <circle r="5" fill="#f0b450"/>
+  </g>
+  <text x="108" y="80" class="sans" font-size="15" font-weight="800" letter-spacing="3.5" fill="#d8b06a">AI BEAUTY STUDIO · POWERED BY YOUCAM API</text>
+
+  <text x="68" y="182" class="serif" font-size="92" fill="#f6ece4" letter-spacing="-2">Vanakkam</text>
+  <text x="70" y="236" class="serif" font-size="32" font-style="italic" fill="#e25d80">Try on the exact shade you’ll buy.</text>
+  <text x="70" y="276" class="sans" font-size="18" fill="#b9a29c">Skin-scanned · outfit-aware · lighting-tuned · shade-matched by CIEDE2000</text>
+
+  <!-- API pills -->
+  <g class="sans" font-size="14" font-weight="700">
+    <g transform="translate(70 312)"><rect width="168" height="36" rx="18" fill="#f6ece4" opacity=".08" stroke="#f6ece4" stroke-opacity=".2"/><circle cx="20" cy="18" r="5" fill="#7fb8a6"/><text x="34" y="23" fill="#f6ece4">Skin Analysis</text></g>
+    <g transform="translate(250 312)"><rect width="200" height="36" rx="18" fill="#f6ece4" opacity=".08" stroke="#f6ece4" stroke-opacity=".2"/><circle cx="20" cy="18" r="5" fill="#f0b450"/><text x="34" y="23" fill="#f6ece4">Skin Tone Analysis</text></g>
+    <g transform="translate(462 312)"><rect width="176" height="36" rx="18" fill="#f6ece4" opacity=".08" stroke="#f6ece4" stroke-opacity=".2"/><circle cx="20" cy="18" r="5" fill="#e25d80"/><text x="34" y="23" fill="#f6ece4">Makeup VTO</text></g>
+  </g>
+
+  <!-- flow line from pills to arch -->
+  <path d="M650 330 C 760 330, 780 250, 870 250" fill="none" stroke="#f0b450" stroke-width="2" class="flow" opacity=".7"/>
+
+  <!-- temple arch with face -->
+  <path d="M880 390 V170 a150 150 0 0 1 300 0 V390 Z" fill="url(#arch)"/>
+  <g clip-path="url(#archClip)">
+    <rect x="880" y="20" width="300" height="380" fill="url(#kolam)"/>
+    <path d="M948 400 C960 330 990 312 1030 312 C1070 312 1100 330 1112 400Z" fill="#7a1530"/>
+    <path d="M992 314 Q1030 345 1068 314" stroke="#d8b06a" stroke-width="6" fill="none"/>
+    <ellipse cx="1030" cy="232" rx="62" ry="76" fill="#c48d6b"/>
+    <path d="M968 220 C964 140 1096 140 1092 220 C1092 182 1066 160 1030 162 C994 160 968 182 968 220Z" fill="#2b1a17"/>
+    <ellipse cx="1008" cy="226" rx="8" ry="4" fill="#2b1a17"/><ellipse cx="1052" cy="226" rx="8" ry="4" fill="#2b1a17"/>
+    <path d="M995 220 l-8 -5" stroke="#2b1a17" stroke-width="2"/><path d="M1065 220 l8 -5" stroke="#2b1a17" stroke-width="2"/>
+    <path class="lip" d="M1016 268 Q1030 260 1044 268 Q1030 282 1016 268Z" fill="#6b1a24"/>
+    <circle cx="1030" cy="200" r="3.5" fill="#8e1b3a"/>
+    <rect class="scan" x="960" y="150" width="140" height="18" fill="url(#beam)"/>
+  </g>
+
+  <!-- floating cards -->
+  <g transform="translate(730 64)"><g class="f1">
+    <rect width="150" height="96" rx="16" fill="#1e1418" stroke="#f6ece4" stroke-opacity=".14"/>
+    <text x="16" y="26" class="sans" font-size="10" font-weight="800" letter-spacing="2" fill="#b9a29c">BEAUTY DNA</text>
+    <circle cx="28" cy="50" r="12" fill="#b8947a"/><circle cx="58" cy="50" r="12" fill="#c52c32"/><circle cx="88" cy="50" r="12" fill="#5b575a"/>
+    <text x="16" y="82" class="sans" font-size="12" font-weight="700" fill="#f6ece4">Warm · Medium</text>
+  </g></g>
+  <g transform="translate(1100 250)"><g class="f2">
+    <rect width="150" height="104" rx="16" fill="#1e1418" stroke="#f6ece4" stroke-opacity=".14"/>
+    <text x="16" y="26" class="sans" font-size="10" font-weight="800" letter-spacing="2" fill="#b9a29c">SHADE MATCH</text>
+    <text x="16" y="62" class="serif" font-size="34" fill="#7fb8a6">89%</text>
+    <text x="16" y="86" class="sans" font-size="11" fill="#b9a29c">28N · ΔE00 2.4</text>
+  </g></g>
+  <g transform="translate(1150 40)"><g class="f3">
+    <rect width="104" height="70" rx="16" fill="#1e1418" stroke="#f6ece4" stroke-opacity=".14"/>
+    <rect x="14" y="16" width="24" height="38" rx="5" fill="#6b1a24"/><rect x="42" y="16" width="24" height="38" rx="5" fill="#c9a14a"/><rect x="70" y="16" width="20" height="38" rx="5" fill="#1f5a46"/>
+  </g></g>
+</svg>

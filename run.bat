@@ -1,6 +1,6 @@
 @echo off
 rem ============================================================================
-rem  LEMON MAJA - QUICK RUNNER & RUNNING INSTRUCTIONS
+rem  VANAKKAM - QUICK RUNNER & RUNNING INSTRUCTIONS
 rem ============================================================================
 rem  HOW TO USE:
 rem    1. Open Command Prompt (cmd) or PowerShell in this folder.
@@ -18,11 +18,11 @@ rem  HOW TO STOP:
 rem    Press Ctrl + C in the terminal window.
 rem ============================================================================
 
-title Lemon Maja - Next.js Dev Server
+title Vanakkam - Next.js Dev Server
 cls
 
 echo ============================================================================
-echo                      LEMON MAJA APPLICATION RUNNER
+echo                      VANAKKAM APPLICATION RUNNER
 echo ============================================================================
 echo.
 

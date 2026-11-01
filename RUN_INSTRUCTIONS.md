@@ -1,6 +1,6 @@
-# Lemon Maja - Running Instructions
+# Vanakkam - Running Instructions
 
-Complete instructions to run and develop the **Lemon Maja** web application on Windows.
+Complete instructions to run and develop the **Vanakkam** web application on Windows.
 
 ---
 
