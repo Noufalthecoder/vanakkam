@@ -1,0 +1,19 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# New → Blueprint → pick this repo. You'll be asked for YOUCAM_API_KEY once.
+services:
+  - type: web
+    name: vanakkam
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
+    startCommand: pnpm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
+      - key: YOUCAM_API_KEY
+        sync: false # secret: entered in the Render dashboard, never committed
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"

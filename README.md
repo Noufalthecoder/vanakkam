@@ -306,7 +306,13 @@ pnpm dev                        # → http://localhost:3000
 | `YOUCAM_API_KEY` | ✅ | |
 | `YOUCAM_API_BASE` | | `https://yce-api-01.makeupar.com/s2s/v2.0`. For the global console, use `https://yce-api-01.perfectcorp.com/s2s/v2.0` |
 
-**Deploy on Vercel:** import the repo, add `YOUCAM_API_KEY`, and deploy. There is no database and no extra services.
+### ☁️ Deploy
+
+<a href="https://render.com/deploy?repo=https://github.com/Noufalthecoder/vanakkam"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32"/></a>
+
+**Render:** the included [`render.yaml`](render.yaml) blueprint sets up everything: Node 22, a pnpm build and `pnpm start`. Click the button (or go to *New → Blueprint* and pick this repo) and paste your `YOUCAM_API_KEY` when asked. Note that free instances sleep when idle, so the first visit after a while takes about 30–60 seconds to wake.
+
+**Vercel:** import the repo, add `YOUCAM_API_KEY` and deploy. Neither option needs a database or extra services.
 
 <details>
 <summary><b>📂 Code map</b></summary>
